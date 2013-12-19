@@ -73,12 +73,19 @@
     </sprites>
     <sprites name="colisiones">
       <sprite>sprites\spr_sotano_collision</sprite>
+      <sprite>sprites\spr_caja1</sprite>
       <sprite>sprites\spr_tuberia</sprite>
       <sprite>sprites\spr_puerta_hotel</sprite>
       <sprite>sprites\spr_npc</sprite>
       <sprite>sprites\spr_mesa</sprite>
       <sprite>sprites\spr_cabezal</sprite>
       <sprite>sprites\spr_pared</sprite>
+      <sprite>sprites\spr_colision</sprite>
+      <sprite>sprites\spr_caja_ventilador</sprite>
+      <sprite>sprites\spr_caja2</sprite>
+      <sprite>sprites\spr_caja3</sprite>
+      <sprite>sprites\spr_tuberia_sotano</sprite>
+      <sprite>sprites\spr_tuberia_sotano2</sprite>
     </sprites>
     <sprites name="fasefinal">
       <sprite>sprites\spr_sombra_final</sprite>
@@ -120,6 +127,13 @@
       <object>objects\obj_tuberia</object>
       <object>objects\obj_collision_sotano</object>
       <object>objects\obj_pared</object>
+      <object>objects\obj_colision</object>
+      <object>objects\obj_caja1</object>
+      <object>objects\obj_caja_ventilador</object>
+      <object>objects\obj_caja2</object>
+      <object>objects\obj_caja3</object>
+      <object>objects\obj_tuberia_sotano</object>
+      <object>objects\obj_tuberia_sotano2</object>
     </objects>
     <objects name="cueva">
       <object>objects\obj_pared_derecha</object>
@@ -175,6 +189,7 @@
     <object>objects\obj_texto_test</object>
     <objects name="prota">
       <object>objects\obj_prota</object>
+      <object>objects\obj_prota_viejo</object>
       <object>objects\obj_locura</object>
     </objects>
     <objects name="puzzleacertijo">

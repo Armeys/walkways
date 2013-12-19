@@ -145,7 +145,7 @@ cerrado = false;
         cerrar = true;       
     }     
 }
-if((obj_prota.y + 64 &lt; y || paso == true)&amp;&amp; cerrar = true &amp;&amp; cerrado == false)
+if((obj_prota.y &lt; y || paso == true)&amp;&amp; cerrar = true &amp;&amp; cerrado == false)
 {
     solid = true;
     obj_prota.depth = 3;
@@ -169,9 +169,9 @@ if((obj_prota.y + 64 &lt; y || paso == true)&amp;&amp; cerrar = true &amp;&amp; 
     }    
 } 
 
-if (solid == true &amp;&amp; obj_prota.y -24 &lt; y &amp;&amp; distance_to_object(obj_prota) &lt; 64 &amp;&amp; resuelto == false)
+if (solid == true &amp;&amp; obj_prota.y  &lt; y &amp;&amp; distance_to_object(obj_prota) &lt; 64 &amp;&amp; resuelto == false)
 {
-    obj_prota.y = y + 24;
+    obj_prota.y = y ;
 }
 
 if (solid == true &amp;&amp; obj_prota.y  &gt; y &amp;&amp; distance_to_object(obj_prota) &lt; 64 &amp;&amp; resuelto == true)

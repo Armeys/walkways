@@ -122,7 +122,7 @@ candibujar = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(distance_to_object(obj_prota) &lt;= 5 &amp;&amp; keyboard_check(ord("E")) &amp;&amp; canPush == true)
+            <string>if(distance_to_object(obj_prota) &lt;= 3 &amp;&amp; keyboard_check(ord("E")) &amp;&amp; canPush == true)
 {    
     animar = true;
     animado = false;

@@ -3,8 +3,8 @@
   <caption></caption>
   <width>800</width>
   <height>1536</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>1</vsnap>
+  <hsnap>1</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -55,8 +55,13 @@
     <instance objName="obj_control_pared" x="128" y="1472" name="inst_564FA728" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_control_palanca" x="64" y="1376" name="inst_B0A593A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_control_acertijo" x="160" y="96" name="inst_EF69EE3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pared" x="256" y="1536" name="inst_28063BC3" locked="0" code="" scaleX="1.39999997615814" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pared" x="256" y="-32" name="inst_910BA40B" locked="0" code="" scaleX="1.39999997615814" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_colision" x="389" y="1542" name="inst_254E14D4" locked="0" code="" scaleX="15" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_colision" x="392" y="-8" name="inst_AF4F7259" locked="0" code="" scaleX="15" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_colision" x="389" y="981" name="inst_DFE9D79E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_colision" x="338" y="871" name="inst_C6454856" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_colision" x="388" y="567" name="inst_C08488C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_colision" x="388" y="871" name="inst_F9C3E350" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_colision" x="438" y="871" name="inst_18BC44BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lightmap_cueva" x="64" y="1440" name="inst_D81C90B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_light_cueva" x="480" y="1376" name="inst_77FD8C4E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_light_cueva" x="293" y="1088" name="inst_BDDD4F3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
