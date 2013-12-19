@@ -204,7 +204,8 @@ alarm[0] = 100;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(obj_prota.x &gt; 200 &amp;&amp; obj_prota.x &lt; 250 &amp;&amp; obj_prota.y == 147 &amp;&amp; room == rm_hall)
+            <string>//////////// cambio de fase////////////////
+if(obj_prota.x &gt; 200 &amp;&amp; obj_prota.x &lt; 250 &amp;&amp; obj_prota.y == 147 &amp;&amp; room == rm_hall)
 {
 room = rm_sotano;
 }
@@ -217,6 +218,7 @@ if(obj_prota.x &gt; 658 &amp;&amp; obj_prota.x &lt; 692 &amp;&amp; obj_prota.y =
 room = rm_pasillo;
 }
 
+/////////////////Sombra/////////////////////////
 with(obj_shadowcasterProta) instance_destroy();
 
 prota = instance_create(obj_prota.x,obj_prota.y,obj_shadowcasterProta);
@@ -230,6 +232,7 @@ prota.cast_y[2]=70;
 prota.cast_x[3]=30;
 prota.cast_y[3]=70;
 
+////////////trompo/////////////7
 if(activate)
 {
 if(alarm[3] &lt; 0){
@@ -243,6 +246,7 @@ alarm[4] = 200;
 }
 }
 
+///////////////no se////////////////
 if(room == rm_hall)
 {
 if(y&gt;300 &amp;&amp; !evento1)
@@ -250,6 +254,9 @@ if(y&gt;300 &amp;&amp; !evento1)
 vspeed = 0;
 } 
 }
+
+
+///////////intro////////////////
 if(room == rm_animacion)
 {
 
@@ -285,6 +292,8 @@ else{
 hspeed = 0;
 vspeed = 0;
 
+
+//////////////Controles/////////////////
 if(!inmovil)
 {
     
@@ -315,7 +324,7 @@ if(!inmovil)
     
     }
     
-    if(room == rm_pasillo &amp;&amp; obj_prota.y&lt;250)
+    /*if(room == rm_pasillo &amp;&amp; obj_prota.y&lt;250)
     {
     y =250;
     vspeed = 0;
@@ -324,7 +333,7 @@ if(!inmovil)
     {
     y = 272;
     vspeed = 0;
-    }
+    }*/
     if(keyboard_check(ord("R")) &amp;&amp; locura &lt; 98)
     {
         locura=locura+0.4;
