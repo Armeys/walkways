@@ -125,7 +125,7 @@
       <object>objects\obj_mesa</object>
       <object>objects\obj_npc</object>
       <object>objects\obj_tuberia</object>
-      <object>objects\obj_collision_sotano</object>
+      <object>objects\obj_collisionsotano</object>
       <object>objects\obj_pared</object>
       <object>objects\obj_colision</object>
       <object>objects\obj_caja1</object>
