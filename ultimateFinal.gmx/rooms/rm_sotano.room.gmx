@@ -51,7 +51,6 @@
   </views>
   <instances>
     <instance objName="obj_prota" x="752" y="296" name="inst_6DD9DF01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fase2" x="379" y="191" name="inst_7CD51A05" locked="0" code="" scaleX="0.796875" scaleY="1.3125" colour="4294967295" rotation="0"/>
     <instance objName="obj_locura" x="1142" y="267" name="inst_F7736DD4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_colision" x="422" y="648" name="inst_6959F382" locked="0" code="" scaleX="30" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_colision" x="182" y="378" name="inst_93B481E6" locked="0" code="" scaleX="1" scaleY="35" colour="4294967295" rotation="0"/>
@@ -108,6 +107,7 @@
     <instance objName="obj_caja3" x="311" y="374" name="inst_BEAFB8C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tuberia_sotano" x="193" y="264" name="inst_81DF470B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tuberia_sotano2" x="194" y="417" name="inst_B3D47FF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sotanotocueva2" x="372" y="184" name="inst_B4E239C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -177,6 +177,7 @@
       <object>objects\obj_pasillo_puerta</object>
       <object>objects\obj_puerta_anim</object>
       <object>objects\obj_fase2</object>
+      <object>objects\obj_sotanotocueva2</object>
       <object>objects\obj_ch_fase</object>
       <object>objects\obj_btn</object>
       <object>objects\obj_caja</object>
