@@ -56,7 +56,7 @@
     <instance objName="obj_tuberia" x="67" y="378" name="inst_D7933BF2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_control_narracion" x="289" y="345" name="inst_3A352916" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="&lt;undefined&gt;" x="227" y="112" name="inst_51467C63" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ch_fase" x="673" y="85" name="inst_A8A11095" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ch_fase" x="673" y="84" name="inst_A8A11095" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cabezal" x="78" y="386" name="inst_980447BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_locura" x="196" y="104" name="inst_B11D8772" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fase2" x="226" y="86" name="inst_26491EC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

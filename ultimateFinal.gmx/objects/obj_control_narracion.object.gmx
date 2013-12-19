@@ -129,7 +129,7 @@ if(obj_sombra_final.escribir == true &amp;&amp; obj_sombra_final.escrito == fals
 
 if(room == rm_animacion)
 {
-    if(keyboard_check(vk_space) || keyboard_check(ord("E")) || keyboard_check(ord("R")))
+    if(keyboard_check(ord("E")) || keyboard_check(ord("R")))
 {
     room_goto(rm_hall);
 }
