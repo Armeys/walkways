@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-101</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -81,14 +81,14 @@ pintado = false;
             <string>
 if (clicado == true)
 {          
-    draw_rectangle(x-29,y-15,x+29,y+15,false);
+    draw_rectangle(x-29,y-12,x+29,y+18,false);
     draw_set_color(c_black);
-    draw_text(x,y,texto);        
+    draw_text_ext(x,y,texto,20,260);        
 }
 else
 {
     draw_set_color(c_white);
-    draw_text(x,y,texto);    
+    draw_text_ext(x,y,texto,20,260);    
 }
 </string>
           </argument>
