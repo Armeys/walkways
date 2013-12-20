@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(room != rm_hall &amp;&amp; room != rm_pasillo){
+            <string>draw_set_halign(fa_middle);
+draw_set_valign(fa_center);
+if(room != rm_hall &amp;&amp; room != rm_pasillo){
 alarm[0] = 620; 
 }
 </string>
