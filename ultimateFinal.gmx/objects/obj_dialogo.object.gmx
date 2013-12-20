@@ -30,6 +30,18 @@ image_speed = 0;
 pintar = true;
 contador = -1;
 texto[0] = "";
+sombra = instance_create(obj_dialogo.x,obj_dialogo.y,obj_shadowcaster_texto);
+sombra.cast_points = 4;
+sombra.cast_x[0]=0;
+sombra.cast_y[0]=0;
+sombra.cast_x[1]=300;
+sombra.cast_y[1]=0;
+sombra.cast_x[2]=300;
+sombra.cast_y[2]=150;
+sombra.cast_x[3]=0;
+sombra.cast_y[3]=150;
+
+
 </string>
           </argument>
         </arguments>
@@ -79,6 +91,7 @@ texto[0] = "";
 {
     contador++;
 }
+
 </string>
           </argument>
         </arguments>
@@ -113,13 +126,13 @@ if(contador &lt; array_length_1d(texto))
 {
     pintar = false;
     draw_set_color(c_white);
-    //draw_set_font(fnt_prueba);
     draw_sprite(spr_fondo_texto,-1,obj_dialogo.x,obj_dialogo.y);
-    draw_text_ext(obj_dialogo.x +25,obj_dialogo.y +13, texto[contador],20,245);
+    draw_text_ext(obj_dialogo.x +140,obj_dialogo.y +65, texto[contador],20,245);
 }
 else
 {
     instance_destroy();
+    with (obj_shadowcaster_texto) instance_destroy();
     obj_prota.inmovil = false;    
     obj_prota.avanza = true;
 }

@@ -52,7 +52,7 @@ pintado = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (mouse_check_button_pressed(mb_left) == true &amp;&amp; mouse_x  &gt;= x -6 &amp;&amp; mouse_x  &lt;= x +59 &amp;&amp; mouse_y &gt;=y +8 and mouse_y &lt;= y+30)
+            <string>if (mouse_check_button_pressed(mb_left) == true &amp;&amp; mouse_x  &gt;= x -29 &amp;&amp; mouse_x  &lt;= x +29 &amp;&amp; mouse_y &gt;=y-15 and mouse_y &lt;= y+15)
 {
     clic = true;
 } 
@@ -81,8 +81,8 @@ pintado = false;
             <string>
 if (clicado == true)
 {          
-    draw_rectangle(x-6,y+8,x+59,y+30,false);
-    draw_set_color(c_fuchsia);
+    draw_rectangle(x-29,y-15,x+29,y+15,false);
+    draw_set_color(c_black);
     draw_text(x,y,texto);        
 }
 else

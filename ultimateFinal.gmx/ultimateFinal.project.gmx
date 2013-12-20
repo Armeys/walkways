@@ -186,6 +186,7 @@
     <objects name="obj_narracion">
       <object>objects\obj_dialogo</object>
       <object>objects\obj_control_narracion</object>
+      <object>objects\obj_shadowcaster_texto</object>
     </objects>
     <object>objects\obj_texto_test</object>
     <objects name="prota">

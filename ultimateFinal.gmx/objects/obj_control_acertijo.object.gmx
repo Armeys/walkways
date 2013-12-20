@@ -58,6 +58,7 @@ op3 = instance_create(0,0,obj_texto_acertijo);
             <kind>1</kind>
             <string>with (obj_texto_acertijo) instance_destroy();
 with (obj_fondo_acertijo) instance_destroy();
+with (obj_shadowcaster_texto) instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -104,25 +105,44 @@ borrar = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ( pregunta == true &amp;&amp; done == false)
+            <string>draw_set_halign(fa_middle);
+draw_set_valign(fa_center);
+if ( pregunta == true &amp;&amp; done == false)
 {        
     with (obj_fondo_acertijo) instance_destroy();
-    op1 = instance_create(room_width/2 - 130,325,obj_texto_acertijo);
+    op1 = instance_create(room_width/2 - 200,325,obj_texto_acertijo);
     op1.texto = "-Wing.";
-    op2 = instance_create(room_width/2 - 50,325,obj_texto_acertijo);
+    op1.depth = -101;
+    op2 = instance_create(room_width/2 - 120,325,obj_texto_acertijo);
     op2.texto = "-frogs.";
-    op3 = instance_create(room_width/2 + 40,325,obj_texto_acertijo);
+    op2.depth = -101;
+    op3 = instance_create(room_width/2 - 40,325,obj_texto_acertijo);
     op3.texto = "-Time.";
-    fondo = instance_create(room_width/2 - 155,230,obj_fondo_acertijo);       
-    done = true;        
+    op3.depth = -101;
+    fondo = instance_create(room_width/2 - 255,230,obj_fondo_acertijo);
+    fondo.depth = -101
+    done = true;
+                
 }
 
 if (obj_prota.y &lt;= 330 &amp;&amp; pregunta == false)
 {
-    fondo = instance_create(room_width/2 - 155,230,obj_fondo_acertijo);    
+    fondo = instance_create(room_width/2 - 255,230,obj_fondo_acertijo);
+    fondo.depth = - 101;
+    sombra = instance_create(room_width/2 - 255,230,obj_shadowcaster_texto);
+    sombra.cast_points = 4;
+    sombra.cast_x[0]=0;
+    sombra.cast_y[0]=0;
+    sombra.cast_x[1]=300;
+    sombra.cast_y[1]=0;
+    sombra.cast_x[2]=300;
+    sombra.cast_y[2]=150;
+    sombra.cast_x[3]=0;
+    sombra.cast_y[3]=150;           
+            
     if (alarm[0] &lt; 0)
     {
-        alarm[0] = 250;
+        alarm[0] = 200;
     }    
     obj_prota.inmovil = true;
 }
@@ -155,15 +175,17 @@ if(instance_number(obj_texto_acertijo) &gt;= 3)
         op3.clic =false;    
         ganar = true;        
         with (obj_fondo_acertijo) instance_destroy();
-        with (obj_texto_acertijo) instance_destroy();
+        with (obj_texto_acertijo) instance_destroy();        
     }
 }
 if (ganar == true &amp;&amp; eco == false)
 {   
     obj_prota.inmovil = false;
-    op3 = instance_create(room_width/2 - 115,285,obj_texto_acertijo);
+    op3 = instance_create(room_width/2 - 105,290,obj_texto_acertijo);
     op3.texto = "Well done. Now you can spend";
-    fondo = instance_create(room_width/2 - 155,230,obj_fondo_acertijo);
+    op3.depth = -101;
+    fondo = instance_create(room_width/2 - 255,230,obj_fondo_acertijo);
+    fondo.depth = -101;
     if (alarm[1] &lt; 0)
     {
         alarm[1] = 100;
@@ -200,11 +222,13 @@ if (obj_prota.y &lt; 50)
             <kind>1</kind>
             <string>if (obj_prota.y &lt;= 330 &amp;&amp; pregunta == false &amp;&amp; borrar == false)
 {
-    text = draw_text_ext(room_width/2 - 130,250,"You are here to test your intelligence, you have to answer this enigma expertly, if you don't do that, you couldn't go on.",20,260);
-}
+    acertijo = draw_text_ext(room_width/2 - 105,295,"You are here to test your intelligence, you have to answer this enigma expertly, if you don't do that, you couldn't go on.",20,260);
+    
+}   
 if (pregunta == true &amp;&amp; ganar == false)
 {
-    draw_text_ext(room_width/2 - 130,250,"I can fly but I haven't got wings. What am I?",20,260);
+    acertijo = draw_text_ext(room_width/2 - 105,265,"I can fly but I haven't got wings. What am I?",20,260);
+    //acertijo.depth = -101;
 }
 
 </string>
