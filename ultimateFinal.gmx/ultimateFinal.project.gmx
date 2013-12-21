@@ -120,7 +120,7 @@
     <font>fonts\fnt_jugend</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_iniciar</object>
+    <object>objects\obj_iniciar_variables</object>
     <objects name="colisiones">
       <object>objects\obj_cabezal</object>
       <object>objects\obj_mesa</object>
