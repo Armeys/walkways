@@ -53,7 +53,7 @@ sound_play(bgm_opening);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room = rm_cueva_2;
+            <string>room = rm_animacion;
 </string>
           </argument>
         </arguments>
