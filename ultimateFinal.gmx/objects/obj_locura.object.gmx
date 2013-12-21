@@ -71,7 +71,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>view_xview[0]+290</string>
+            <string>view_xview[0]+220</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -99,7 +99,7 @@
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>view_xview[0]+308</string>
+            <string>view_xview[0]+238</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -107,7 +107,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>(view_xview[0]+308)+obj_prota.locura</string>
+            <string>(view_xview[0]+238)+obj_prota.locura</string>
           </argument>
           <argument>
             <kind>0</kind>
