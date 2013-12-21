@@ -193,7 +193,7 @@ if (room == rm_cueva_2)
             }
     }      
 
-    if (obj_prota.y &lt; 350  and obj_prota.y &gt; 300)
+    if (obj_prota.y &lt; 350  &amp;&amp; obj_prota.y &gt; 300 &amp;&amp; global.imagenresuelta = false;)
     {        
         room_goto(rm_puzzle);
     }    
@@ -231,6 +231,7 @@ if (room == rm_cueva_2)
     }
     if (obj_prota.y &lt;= 50)
     {
+        global.imagenresuelta = false;
         sound_stop_all();
         room_goto(rm_final);
     }
