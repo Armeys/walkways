@@ -127,7 +127,7 @@ if(contador &lt; array_length_1d(texto))
     pintar = false;
     draw_set_color(c_white);
     draw_sprite(spr_fondo_texto,-1,obj_dialogo.x,obj_dialogo.y);
-    draw_text_ext(obj_dialogo.x +140,obj_dialogo.y +65, texto[contador],20,245);
+    draw_text_ext(obj_dialogo.x +150,obj_dialogo.y +65, texto[contador],20,245);
 }
 else
 {
