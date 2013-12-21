@@ -110,25 +110,26 @@ draw_set_valign(fa_center);
 if ( pregunta == true &amp;&amp; done == false)
 {        
     with (obj_fondo_acertijo) instance_destroy();
+    with (obj_texto_acertijo) instance_destroy();
+    acertijo = instance_create(room_width/2 - 105,275,obj_texto_acertijo);
+    acertijo.texto = "I can fly but I haven't got wings. What am I?";
     op1 = instance_create(room_width/2 - 200,325,obj_texto_acertijo);
     op1.texto = "-Wing.";
-    op1.depth = -101;
     op2 = instance_create(room_width/2 - 120,325,obj_texto_acertijo);
     op2.texto = "-frogs.";
-    op2.depth = -101;
     op3 = instance_create(room_width/2 - 40,325,obj_texto_acertijo);
     op3.texto = "-Time.";
-    op3.depth = -101;
     fondo = instance_create(room_width/2 - 255,230,obj_fondo_acertijo);
-    fondo.depth = -101
+    
     done = true;
                 
 }
 
 if (obj_prota.y &lt;= 330 &amp;&amp; pregunta == false)
 {
-    fondo = instance_create(room_width/2 - 255,230,obj_fondo_acertijo);
-    fondo.depth = - 101;
+    acertijo = instance_create(room_width/2 - 105,295,obj_texto_acertijo);
+    acertijo.texto = "You are here to test your intelligence, you have to answer this enigma expertly, if you don't do that, you couldn't go on.";
+    fondo = instance_create(room_width/2 - 255,230,obj_fondo_acertijo);    
     sombra = instance_create(room_width/2 - 255,230,obj_shadowcaster_texto);
     sombra.cast_points = 4;
     sombra.cast_x[0]=0;
@@ -142,7 +143,7 @@ if (obj_prota.y &lt;= 330 &amp;&amp; pregunta == false)
             
     if (alarm[0] &lt; 0)
     {
-        alarm[0] = 200;
+        alarm[0] = 150;
     }    
     obj_prota.inmovil = true;
 }
@@ -184,8 +185,7 @@ if (ganar == true &amp;&amp; eco == false)
     op3 = instance_create(room_width/2 - 105,290,obj_texto_acertijo);
     op3.texto = "Well done. Now you can spend";
     op3.depth = -101;
-    fondo = instance_create(room_width/2 - 255,230,obj_fondo_acertijo);
-    fondo.depth = -101;
+    fondo = instance_create(room_width/2 - 255,230,obj_fondo_acertijo);    
     if (alarm[1] &lt; 0)
     {
         alarm[1] = 100;
@@ -227,8 +227,7 @@ if (obj_prota.y &lt; 50)
 }   
 if (pregunta == true &amp;&amp; ganar == false)
 {
-    acertijo = draw_text_ext(room_width/2 - 105,265,"I can fly but I haven't got wings. What am I?",20,260);
-    //acertijo.depth = -101;
+    acertijo = draw_text_ext(room_width/2 - 105,265,"I can fly but I haven't got wings. What am I?",20,260);    
 }
 
 </string>
