@@ -27,61 +27,50 @@
             <kind>1</kind>
             <string>if(global.imagenresuelta == false)
 {
-    sound_stop_all();
+    sound_stop_all();    
 }
 
 switch(room)
 {
-    case rm_principal: 
-        sound_delete(bgm_opening);               
+    case rm_principal:
         sound_play(bgm_opening);
         sound_loop(bgm_opening);
         break;
-    case rm_animacion:
-        sound_delete(bgm_city);
+    case rm_animacion:        
         sound_play(bgm_city);
         break;
     case rm_hall:
-    sound_delete(bgm_hall);
         sound_play(bgm_hall);
         sound_loop(bgm_hall);
         break;
-    case rm_pasillo:
-        sound_delete(bgm_pasillo);
+    case rm_pasillo:        
         sound_play(bgm_pasillo);
         sound_loop(bgm_pasillo);
         break;
-    case rm_sotano:
-        sound_delete(bgm_sotano);
+    case rm_sotano:        
         sound_play(bgm_sotano);
         sound_loop(bgm_sotano);
         break;
-    case rm_cueva:
-        sound_delete(snd_puzzle_palancas);
-        sound_delete(snd_puzzle_acertijo);
+    case rm_cueva:      
         sound_play(snd_puzzle_palancas);
         sound_loop(snd_puzzle_palancas);
         break;
     case rm_cueva_2:
         if (global.imagenresuelta == false)
         {
-            sound_delete(snd_puzzle_objeto);
             sound_play(snd_puzzle_objeto);
             sound_loop(snd_puzzle_objeto);
         }
         break;
-    case rm_puzzle:
-        sound_delete(snd_puzzle_imagen);
+    case rm_puzzle:        
         sound_play(snd_puzzle_imagen);
         sound_loop(snd_puzzle_imagen);
         break;
-    case rm_final:
-        sound_delete(snd_final_chorus);
+    case rm_final:        
         sound_play(snd_final_chorus);
         sound_loop(snd_final_chorus);
         break;
-    case rm_creditos:
-        sound_delete(snd_creditos);
+    case rm_creditos:        
         sound_play(snd_creditos);
         sound_loop(snd_creditos);
         break;
