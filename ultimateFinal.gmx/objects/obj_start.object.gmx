@@ -51,7 +51,7 @@ draw_set_font(fnt_jugend);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room = rm_animacion;
+            <string>room = rm_cueva;
 </string>
           </argument>
         </arguments>

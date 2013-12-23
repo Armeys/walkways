@@ -55,7 +55,6 @@
     <instance objName="obj_puerta_anim" x="1036" y="547" name="inst_F3A30989" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prota" x="-1" y="678" name="inst_49BC7853" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_control_narracion" x="-117" y="366" name="inst_F7313982" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_iniciar_variables" x="-97" y="419" name="inst_6FC7E512" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_control_mucica" x="-91" y="473" name="inst_3158A958" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
