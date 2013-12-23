@@ -70,6 +70,7 @@
       <sprite>sprites\spr_flashback</sprite>
       <sprite>sprites\spr_fondo_texto</sprite>
       <sprite>sprites\spr_detecta</sprite>
+      <sprite>sprites\spr_intro_prota</sprite>
     </sprites>
     <sprites name="colisiones">
       <sprite>sprites\spr_sotano_collision</sprite>
@@ -120,6 +121,7 @@
     <font>fonts\fnt_jugend</font>
   </fonts>
   <objects name="objects">
+    <object>objects\obj_control_mucica</object>
     <object>objects\obj_iniciar_variables</object>
     <objects name="colisiones">
       <object>objects\obj_cabezal</object>

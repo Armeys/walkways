@@ -54,6 +54,7 @@
     <instance objName="obj_sombra_final" x="448" y="320" name="inst_1E0BDF7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_control_final" x="280" y="376" name="inst_1FBFACBE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_control_narracion" x="296" y="440" name="inst_F3125257" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_control_mucica" x="244" y="440" name="inst_463E5981" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lightmap_final" x="128" y="832" name="inst_56D74C1E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_light_final" x="500" y="384" name="inst_1C9F5A9C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>

@@ -27,8 +27,6 @@
             <kind>1</kind>
             <string>evento = false;
 draw_set_font(fnt_Arial);
-sound_stop_all();
-sound_play(bgm_hall);
 </string>
           </argument>
         </arguments>

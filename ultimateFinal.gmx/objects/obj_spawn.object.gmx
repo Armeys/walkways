@@ -36,12 +36,7 @@
    baseX = (room_width/2) - 150;
    image_speed = 0;
    acertados = 0;
-   contador = 20;
-   if(!sound_play(snd_puzzle_imagen))
-   {
-        sound_play(snd_puzzle_imagen);
-   }
-   
+   contador = 20; 
 </string>
           </argument>
         </arguments>

@@ -53,7 +53,7 @@ alarm[0] = 620;
           <argument>
             <kind>1</kind>
             <string>if(room == rm_animacion){
-    narrar = instance_create(view_xview[0]+200,318,obj_dialogo);
+    narrar = instance_create(view_xview[0]+300,600,obj_dialogo);    
     narrar.texto[0] = "Hum, this has been stronger than normal (Iulius looks around as he is looking for something)";
 }
 
@@ -131,7 +131,7 @@ if(obj_sombra_final.escribir == true &amp;&amp; obj_sombra_final.escrito == fals
 
 if(room == rm_animacion)
 {
-    if(keyboard_check(ord("E")) || keyboard_check(ord("R")))
+    if(keyboard_check(ord("R")) || keyboard_check(ord("E")) || keyboard_check(vk_enter))
 {
     room_goto(rm_hall);
 }

@@ -28,10 +28,6 @@
             <string>ending = false;
 stopit = false;
 obj_prota.inmovil = true;
-if (!sound_isplaying(snd_final_chorus))
-{
-    sound_play(snd_final_chorus);
-}
 </string>
           </argument>
         </arguments>

@@ -52,6 +52,7 @@
   <instances>
     <instance objName="obj_spawn" x="256" y="160" name="inst_12933B07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_texto" x="32" y="32" name="inst_8E602D74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_control_mucica" x="64" y="256" name="inst_917B024E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

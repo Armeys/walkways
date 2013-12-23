@@ -26,8 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>evento = false;
-sound_stop_all();
-sound_play(bgm_pasillo);
 </string>
           </argument>
         </arguments>
