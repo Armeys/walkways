@@ -29,6 +29,7 @@
 canPush = true;
 image_speed = 0;
 animar = false;
+animado = false;
 candialogo = false;
 candibujar = true;
 </string>
@@ -160,7 +161,11 @@ if (animar == true &amp;&amp; animado == false)
             narrar = instance_create(250,obj_prota.y-50,obj_dialogo);
             narrar.texto[0] = "''Incorrect''. Try again.";
             candibujar = false;
-            alarm[2] = 100;    
+            alarm[2] = 100;
+            if(!sound_isplaying(snd_mek))
+            {                   
+                sound_play(snd_mek);                
+            }    
         }
         obj_pared_derecha.x = obj_pared_derecha.x -10;
         obj_pared_izq.x = obj_pared_izq.x +10;    

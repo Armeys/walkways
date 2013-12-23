@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,8 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>global.imagenresuelta = false;
+global.locura = 0;
 draw_set_font(fnt_Arial);
-draw_set_color(c_white);
+global.contadorPuertaTroll = 0;
 </string>
           </argument>
         </arguments>

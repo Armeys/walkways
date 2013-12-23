@@ -25,9 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sound_stop_all();
-apagar = false;
+            <string>apagar = false;
 obj_prota.depth = 0;
+sound_volume(snd_puzzle_palancas,1);
+sound_volume(snd_puzzle_acertijo,1);
 if(global.imagenresuelta == true)
 {
     obj_prota.y = 200;       
@@ -117,15 +118,7 @@ paredder.cast_y[3]=10;
             <kind>1</kind>
             <string>////////// cueva //////////
 if (room == rm_cueva)
-{
-    if (obj_prota.y + 64 &lt; 1450)
-    {
-        if (!sound_isplaying(snd_puzzle_palancas))
-        {
-            sound_play(snd_puzzle_palancas);        
-        }
-    }
-    
+{    
     if (obj_puerta.apagarSndPalancas == true )
     {    
         if (contadorPalancas &gt;= 0)
@@ -148,8 +141,9 @@ if (room == rm_cueva)
     if (obj_prota.y +64 &lt; obj_puerta.y)
     {
         if (!sound_isplaying(snd_puzzle_acertijo))
-        {
-            sound_play(snd_puzzle_acertijo);        
+        {            
+            sound_play(snd_puzzle_acertijo);
+            sound_loop(snd_puzzle_acertijo);        
         }
     }
     
@@ -166,7 +160,9 @@ if (room == rm_cueva)
         }
         else
         {
-            sound_stop(snd_puzzle_acertijo);        
+            sound_stop(snd_puzzle_acertijo);
+            sound_volume(snd_puzzle_acertijo,1);
+            contadorPalancas = 1;        
         }    
     }
 }
@@ -189,7 +185,8 @@ if (room == rm_cueva_2)
             else
             {
                 sound_stop(snd_puzzle_imagen);
-                contador = 1;       
+                sound_volume(snd_puzzle_imagen,1);
+                contadorPalancas = 1;       
             }
     }      
 
@@ -202,14 +199,7 @@ if (room == rm_cueva_2)
     {
         terminado = true;
         candialogo = true;
-    }
-    if (obj_prota.y + 64 &lt; 1450)
-    {
-        if (!sound_isplaying(snd_puzzle_objeto))
-        {
-            sound_play(snd_puzzle_objeto);        
-        }
-    }
+    }    
     
     if (obj_puerta.apagarSndPalancas == true )
     {    
@@ -226,13 +216,13 @@ if (room == rm_cueva_2)
         {
             contadorPalancas = 1;
             sound_stop(snd_puzzle_objeto);
+            sound_volume(snd_puzzle_objeto,1);
             obj_puerta.apagarSndPalancas = false;        
         }    
     }
     if (obj_prota.y &lt;= 50)
     {
-        global.imagenresuelta = false;
-        sound_stop_all();
+        global.imagenresuelta = false;        
         room_goto(rm_final);
     }
 }

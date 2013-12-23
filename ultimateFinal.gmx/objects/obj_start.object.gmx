@@ -28,8 +28,6 @@
             <string>visible = false;
 draw_set_color(c_black);
 draw_set_font(fnt_jugend);
-sound_stop_all();
-sound_play(bgm_opening);
 
 </string>
           </argument>

@@ -28,7 +28,6 @@
             <string>inmovil = false;
 hspeed =0;
 vspeed = 0;
-locura = 0;
 tieneLlave = false;
 movimiento = true;
 avanza = false;
@@ -36,12 +35,6 @@ music = true;
 activate = false;
 giro = 30;
 randomize();
-if(room == rm_sotano)
-{
-sound_stop_all();
-if(!sound_isplaying(bgm_sotano))
-sound_play(bgm_sotano);
-}
 </string>
           </argument>
         </arguments>
@@ -180,8 +173,8 @@ sound_stop(bgm_city);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>locura = locura-2.5;
-alarm[0] = 100;
+            <string>global.locura = global.locura-2.5;
+//alarm[0] = 50;
 </string>
           </argument>
         </arguments>
@@ -235,15 +228,16 @@ prota.cast_y[3]=-10;
 ////////////trompo/////////////7
 if(activate)
 {
-if(alarm[3] &lt; 0){
-alarm[3] = giro; 
-if(giro &gt;2)
-giro=giro-2;
-if(alarm[4] &lt; 0)
-{
-alarm[4] = 200;
-}
-}
+    if(alarm[3] &lt; 0)
+    {
+        alarm[3] = giro; 
+        if(giro &gt;2)
+        giro=giro-2;
+        if(alarm[4] &lt; 0)
+        {
+            alarm[4] = 200;
+        }
+    }
 }
 
 ///////////////no se////////////////
@@ -295,25 +289,7 @@ vspeed = 0;
 
 //////////////Controles/////////////////
 if(!inmovil)
-{
-     /////////////////////movimiento////////////////////7
-    /*if (keyboard_check(vk_up)) {
-    if(place_empty(x,y-4) || room == rm_cueva_2 || room == rm_cueva || room == rm_pasillo)
-    vspeed = -2;
-    }
-    else if (keyboard_check(vk_down)) {
-    if(place_empty(x,y+4) || room == rm_cueva_2 || room == rm_cueva || room == rm_pasillo)
-    vspeed = 2;
-    }
-    else if (keyboard_check(vk_left)) {
-    if(place_empty(x-4,y) || room == rm_cueva_2 || room == rm_cueva || room == rm_pasillo)
-    hspeed = -2;
-    }
-    else if (keyboard_check(vk_right)) {
-    if(place_empty(x+4,y)|| room == rm_cueva_2 || room == rm_cueva || room == rm_pasillo)
-    hspeed = 2;    
-    }*/
-    
+{   
     if (keyboard_check(vk_up)) 
     {    
         if (!collision_rectangle(x-3,y,x+3,y-3,obj_colision,0,0))
@@ -333,67 +309,11 @@ if(!inmovil)
     {
         if (!collision_rectangle(x,y,x+10,y,obj_colision,0,0))
         hspeed = 2;    
-    }
-    
-    
-    
-    
-    if (keyboard_check(ord("R")))
-    {
-        obj_btn.visible = true;
-    }
-    else
-    {
-        obj_btn.visible = false;
-    }
-
-    
-    
-    /*if(room == rm_pasillo &amp;&amp; obj_prota.y&lt;250)
-    {
-    y =250;
-    vspeed = 0;
-    }
-    if(room == rm_pasillo &amp;&amp; obj_prota.y&gt;272)
-    {
-    y = 272;
-    vspeed = 0;
-    }*/
-    if(keyboard_check(ord("R")) &amp;&amp; locura &lt; 98)
-    {
-        locura=locura+0.4;
-        if(keyboard_check(ord("R")) &amp;&amp; room == rm_pasillo &amp;&amp; instance_number(obj_btn) == 0 )
-        {
-            btn=instance_create(560,253,obj_btn);
-            btn.image_alpha = 1;
-            btn.original = true;
-        }
-        
-        if(locura &gt; 10 &amp;&amp; room == rm_pasillo &amp;&amp; instance_number(obj_btn) &gt; 0 &amp;&amp; instance_number(obj_btn) &lt; 4)
-        {
-        
-            r=random_range(100,500);
-            prob= floor(random(100))+1;
-            if(prob == 50 || prob == 100 || prob == 1 || prob == 29)
-            {
-                btn=instance_create(r,250,obj_btn);
-                btn.original = false;
-                btn.image_alpha = 1;
-            }
-        }
-    }
-    if(alarm[0] &lt; 0 &amp;&amp; locura &gt; 0 &amp;&amp; !keyboard_check(ord("R")))
-    {
-    alarm[0] = 100;
-    }
-    if(locura &lt; 0)
-    {
-    locura = 0;
-    }
+    }    
   }
 }
 
-
+/////////////////////////////// control sprites/////////////////////////7
  if(hspeed &gt; 0)
     {
     sprite_index = spr_camina_der;

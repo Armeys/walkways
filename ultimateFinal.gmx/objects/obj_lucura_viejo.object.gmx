@@ -26,30 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>limiteAlcanzado = false;
-r = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>test = 0;
 </string>
           </argument>
         </arguments>
@@ -72,7 +48,7 @@ r = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.locura = global.locura-2;
+            <string>global.locura = global.locura-2.5;
 </string>
           </argument>
         </arguments>
@@ -95,45 +71,27 @@ r = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch (room)
-{
-    case rm_pasillo:        
-        if (keyboard_check(ord("R")) &amp;&amp; limiteAlcanzado == false)
-        {
-            obj_btn.visible = true;
-            with (obj_btn_false) visible = true;
-        }
-        else
-        {
-            obj_btn.visible = false;
-            with (obj_btn_false) visible = false;
-        }
-        if(keyboard_check(ord("R")) &amp;&amp; instance_number(obj_btn) == 0 )
-        {
-            btn=instance_create(700,250,obj_btn);
-        }    
-        if(global.locura &gt; 5 &amp;&amp; instance_number(obj_btn_false) &lt; 5 &amp;&amp; keyboard_check(ord("R")))
-        {   
-            if (alarm[1] &lt; 0)
-            {
-                alarm[1] = 100;
-                randomize();            
-                r=floor(random_range(100,820));         
-                if ((r &gt; 120 &amp;&amp; r &lt; 255) || (r &gt; 325 &amp;&amp; r &lt; 440) || (r &gt; 511 &amp;&amp; r &lt; 610) || (r &gt; 680 &amp;&amp; r &lt; 805))
-                {
-                    instance_create(r,250,obj_btn_false);
-                }
-            }                
-        }
-        break;
-}
-
+            <string>
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
       <action>
         <libid>1</libid>
         <id>501</id>
@@ -168,6 +126,60 @@ r = 0;
       </action>
       <action>
         <libid>1</libid>
+        <id>723</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_health</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>view_xview[0]+17</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>view_yview[0]+7</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>(view_xview[0]+17)+global.locura</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>view_yview[0]+14</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>15</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -183,39 +195,52 @@ r = 0;
           <argument>
             <kind>1</kind>
             <string>///////////////////////////// Poder ////////////////////////////////
-
-if (limiteAlcanzado == false)
-{    
-    draw_healthbar(view_xview[0]+17,view_yview[0] +7,(view_xview[0]+17)+global.locura,view_yview[0]+13,100,c_gray,c_blue,c_blue,0,0,0);
-}
-else
-{
-    draw_healthbar(view_xview[0]+17,view_yview[0] +7,(view_xview[0]+17)+global.locura,view_yview[0]+13,100,c_gray,make_color_rgb(200,0,0),make_color_rgb(200,0,0),0,0,0);
-}
-
-if (limiteAlcanzado == true &amp;&amp; global.locura &lt; 70)
-{
-    limiteAlcanzado = false;
-}
-        
-if(keyboard_check(ord("R")) &amp;&amp; global.locura &lt; 98 &amp;&amp; limiteAlcanzado == false &amp;&amp; obj_prota.inmovil == false)
-{
-    global.locura = global.locura+0.2;
-    if (global.locura &gt;= 98)
+    /*if (keyboard_check(ord("R")))
     {
-        limiteAlcanzado = true;            
+        obj_btn.visible = true;
     }
+    else
+    {
+        obj_btn.visible = false;
+    }*/
     
-}
-//////////////////disminuir locura ///////////////////////////
-if(alarm[0] &lt; 0 &amp;&amp; global.locura &gt; 0 &amp;&amp; !keyboard_check(ord("R")))
-{
-    alarm[0] = 75;
-}
-if(global.locura &lt; 0)
-{
-    global.locura = 0;
-}
+    if(keyboard_check(ord("R")) &amp;&amp; global.locura &lt; 98 &amp;&amp; limiteAlcanzado == false)
+    {
+        global.locura = global.locura+0.3;
+        if (global.locura &gt;= 98)
+        {
+            limiteAlcanzado = true;
+            draw_healthbar(view_xview[0]+17,view_yview[0] +7,(view_xview[0]+17)+global.locura,view_yview[0]+14,health,c_gray,c_blue,c_red,0,0,0);
+        }
+        /*if(keyboard_check(ord("R")) &amp;&amp; room == rm_pasillo &amp;&amp; instance_number(obj_btn) == 0 )
+        {
+            btn=instance_create(560,253,obj_btn);
+            btn.image_alpha = 1;
+            btn.original = true;
+        }
+        
+        if(locura &gt; 10 &amp;&amp; room == rm_pasillo &amp;&amp; instance_number(obj_btn) &gt; 0 &amp;&amp; instance_number(obj_btn) &lt; 4)
+        {
+        
+            r=random_range(100,500);
+            prob= floor(random(100))+1;
+            if(prob == 50 || prob == 100 || prob == 1 || prob == 29)
+            {
+                btn=instance_create(r,250,obj_btn);
+                btn.original = false;
+                btn.image_alpha = 1;
+            }
+        }*/
+    }
+    //////////////////disminuir locura ///////////////////////////
+    if(alarm[0] &lt; 0 &amp;&amp; global.locura &gt; 0 &amp;&amp; !keyboard_check(ord("R")))
+    {
+        alarm[0] = 75;
+    }
+    if(global.locura &lt; 0)
+    {
+        global.locura = 0;
+    }
 </string>
           </argument>
         </arguments>

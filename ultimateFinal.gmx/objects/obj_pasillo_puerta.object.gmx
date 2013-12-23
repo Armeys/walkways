@@ -26,14 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>evento = false;
-sound_stop_all();
-sound_play(bgm_pasillo);
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_prota">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -50,22 +48,24 @@ sound_play(bgm_pasillo);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(fnt_Arial);
-if(obj_prota.x &gt;430 &amp;&amp; obj_prota.x &lt;460 &amp;&amp; keyboard_check(ord("E")) &amp;&amp; evento == false)
+            <string>if (distance_to_object(obj_prota) &lt; 10 &amp;&amp; keyboard_check(ord("E")) &amp;&amp; global.contadorPuertaTroll &lt; 2 &amp;&amp; evento == false &amp;&amp; instance_number(obj_dialogo) == 0 &amp;&amp; instance_number(obj_flashback) == 0)
 {
-evento = true;
-instance_create(view_xview[0],0, obj_flashback);
+    global.contadorPuertaTroll += 1;
+    narrar=instance_create(view_xview[0]+60,60,obj_dialogo);
+    narrar.texto[0] = "it's locked";
 }
-
-if(obj_prota.y &gt;248 &amp;&amp; obj_prota.y &lt;260 &amp;&amp; keyboard_check(ord("E")) &amp;&amp; instance_number(obj_dialogo) == 0 &amp;&amp; instance_number(obj_flashback) == 0 &amp;&amp; evento == false)
+else if(distance_to_object(obj_prota) &lt; 10 &amp;&amp; keyboard_check(ord("E")) &amp;&amp; global.contadorPuertaTroll == 2 &amp;&amp; evento == false &amp;&amp; instance_number(obj_dialogo) == 0 &amp;&amp; instance_number(obj_flashback) == 0)
 {
-narrar=instance_create(view_xview[0]+60,60,obj_dialogo);
-narrar.texto[0] = "it's locked";
+    evento = true;
+    instance_create(view_xview[0],0, obj_flashback);
+    global.contadorPuertaTroll = 0;
 }
-if(obj_prota.y &gt;248 &amp;&amp; obj_prota.y &lt;260 &amp;&amp; keyboard_check(ord("E")) &amp;&amp; instance_number(obj_dialogo) == 0 &amp;&amp; instance_number(obj_flashback) == 0 &amp;&amp; evento == true)
+else if (distance_to_object(obj_prota) &lt; 10 &amp;&amp; keyboard_check(ord("E")) &amp;&amp; global.contadorPuertaTroll &lt; 2 &amp;&amp; evento == true &amp;&amp; instance_number(obj_dialogo) == 0 &amp;&amp; instance_number(obj_flashback) == 0)
 {
-narrar=instance_create(view_xview[0]+60,60,obj_dialogo);
-narrar.texto[0] = "it's locked, WTF?";
+    narrar=instance_create(view_xview[0]+60,60,obj_dialogo);
+    narrar.texto[0] = "it's locked, WTF?";
+    narrar.texto[1] = "Must be something hidden here. (Use 'R' key.)";
+    evento = false;
 }
 </string>
           </argument>
