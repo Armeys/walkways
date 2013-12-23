@@ -91,6 +91,7 @@
     <sprites name="fasefinal">
       <sprite>sprites\spr_sombra_final</sprite>
     </sprites>
+    <sprite>sprites\sprite48</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_cueva</background>
@@ -121,6 +122,8 @@
     <font>fonts\fnt_jugend</font>
   </fonts>
   <objects name="objects">
+    <object>objects\obj_texto_test</object>
+    <object>objects\obj_level</object>
     <object>objects\obj_control_mucica</object>
     <object>objects\obj_iniciar_variables</object>
     <objects name="colisiones">
@@ -183,19 +186,18 @@
       <object>objects\obj_sotanotocueva2</object>
       <object>objects\obj_ch_fase</object>
       <object>objects\obj_btn</object>
+      <object>objects\obj_btn_false</object>
       <object>objects\obj_caja</object>
     </objects>
-    <object>objects\obj_level</object>
     <objects name="obj_narracion">
       <object>objects\obj_dialogo</object>
       <object>objects\obj_control_narracion</object>
       <object>objects\obj_shadowcaster_texto</object>
     </objects>
-    <object>objects\obj_texto_test</object>
     <objects name="prota">
       <object>objects\obj_prota</object>
-      <object>objects\obj_prota_viejo</object>
       <object>objects\obj_locura</object>
+      <object>objects\obj_lucura_viejo</object>
     </objects>
     <objects name="puzzleacertijo">
       <object>objects\obj_texto_acertijo</object>

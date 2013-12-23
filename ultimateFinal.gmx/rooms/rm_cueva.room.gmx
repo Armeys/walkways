@@ -73,6 +73,7 @@
     <instance objName="obj_light_cueva" x="483" y="848" name="inst_999AA978" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_light_cueva" x="293" y="256" name="inst_E9BD882B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_light_cueva" x="483" y="256" name="inst_4ECA0674" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_locura" x="144" y="1360" name="inst_1EE36E9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

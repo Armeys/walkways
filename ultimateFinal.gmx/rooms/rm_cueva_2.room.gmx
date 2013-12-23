@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1024</width>
   <height>1536</height>
-  <vsnap>1</vsnap>
-  <hsnap>1</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -60,6 +60,8 @@
     <instance objName="obj_colision" x="483" y="842" name="inst_88D77665" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_colision" x="394" y="-4" name="inst_F141878A" locked="0" code="" scaleX="15" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_control_mucica" x="150" y="1342" name="inst_14859CAC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_colision" x="320" y="720" name="inst_7C6643C1" locked="0" code="" scaleX="4" scaleY="0.200000002980232" colour="4294967295" rotation="0"/>
+    <instance objName="obj_colision" x="480" y="720" name="inst_C080D841" locked="0" code="" scaleX="4" scaleY="0.200000002980232" colour="4294967295" rotation="0"/>
     <instance objName="obj_control_pared" x="128" y="1472" name="inst_564FA728" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lightmap_cueva_2" x="64" y="1376" name="inst_49C34C8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_light_cueva2" x="483" y="1376" name="inst_6C647A57" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

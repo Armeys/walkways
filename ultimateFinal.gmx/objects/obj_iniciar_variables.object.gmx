@@ -26,8 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>global.imagenresuelta = false;
+global.locura = 0;
 draw_set_font(fnt_Arial);
-draw_set_color(c_white);
+global.contadorPuertaTroll = 0;
 </string>
           </argument>
         </arguments>

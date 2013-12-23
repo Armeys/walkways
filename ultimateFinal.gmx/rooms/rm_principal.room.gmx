@@ -52,6 +52,7 @@
   <instances>
     <instance objName="&lt;undefined&gt;" x="466" y="184" name="inst_62770D36" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="&lt;undefined&gt;" x="321" y="665" name="inst_E8DFCB6A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_iniciar_variables" x="-144" y="96" name="inst_9EA5E21C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_start" x="43" y="472" name="inst_2E42099A" locked="0" code="" scaleX="0.990783393383026" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_intro" x="266" y="407" name="inst_9AFF5A99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_intro_mediano" x="534" y="422" name="inst_0496C549" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -62,7 +63,6 @@
     <instance objName="obj_texto_movimiento" x="713" y="165" name="inst_0380DD77" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_controles" x="43" y="608" name="inst_8B5E7E74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_control_mucica" x="-48" y="16" name="inst_8173B6F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_iniciar_variables" x="-144" y="96" name="inst_9EA5E21C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

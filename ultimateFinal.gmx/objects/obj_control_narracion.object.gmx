@@ -98,7 +98,7 @@ if(room == rm_pasillo)
             <string>if (obj_cerradura.cuevaAzut == true)
 {
     narrar = instance_create(250,obj_prota.y-50,obj_dialogo);
-    narrar.texto[0] = "It seems that something is missing here to set up the mechanism.";
+    narrar.texto[0] = "It seems that something is missing here to set up the mechanism.(Use 'R' to show hidden objects).";
     obj_cerradura.cuevaAzut = false;
 }
 
