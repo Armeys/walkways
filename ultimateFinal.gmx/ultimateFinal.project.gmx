@@ -53,6 +53,10 @@
       <sprite>sprites\spr_stand_back</sprite>
       <sprite>sprites\spr_stand_der</sprite>
       <sprite>sprites\spr_stand_frente</sprite>
+      <sprite>sprites\spr_sombras_mano</sprite>
+      <sprite>sprites\spr_sombras_risa</sprite>
+      <sprite>sprites\spr_sombras_fantasma</sprite>
+      <sprite>sprites\spr_sombras_fuego</sprite>
     </sprites>
     <sprites name="intro">
       <sprite>sprites\spr_start</sprite>
@@ -91,7 +95,6 @@
     <sprites name="fasefinal">
       <sprite>sprites\spr_sombra_final</sprite>
     </sprites>
-    <sprite>sprites\sprite48</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_cueva</background>
@@ -105,7 +108,9 @@
     <background>background\bg_splash</background>
     <background>background\bg_creditos</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path_rodear</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\caster_draw.gml</script>
     <script>scripts\caster_init.gml</script>
@@ -197,7 +202,10 @@
     <objects name="prota">
       <object>objects\obj_prota</object>
       <object>objects\obj_locura</object>
-      <object>objects\obj_lucura_viejo</object>
+      <object>objects\obj_sombra_mano</object>
+      <object>objects\obj_sombra_fantasma</object>
+      <object>objects\obj_sombra_fuego</object>
+      <object>objects\obj_sombra_risa</object>
     </objects>
     <objects name="puzzleacertijo">
       <object>objects\obj_texto_acertijo</object>

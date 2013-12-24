@@ -27,6 +27,15 @@
             <kind>1</kind>
             <string>limiteAlcanzado = false;
 r = 0;
+rnd_sombra = 0;
+global.sombra[0] = 0;
+global.sombra[1] = 0;
+global.sombra[2] = 0;
+global.sombra[3] = 0;
+global.sombra_obj[0] = obj_sombra_mano;
+global.sombra_obj[1] = obj_sombra_risa;
+global.sombra_obj[2] = obj_sombra_fantasma;
+global.sombra_obj[3] = obj_sombra_fuego;
 </string>
           </argument>
         </arguments>
@@ -72,7 +81,7 @@ r = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.locura = global.locura-2;
+            <string>global.locura = global.locura-3;
 </string>
           </argument>
         </arguments>
@@ -128,6 +137,196 @@ r = 0;
         break;
 }
 
+///////////////////////Sombras///////////////////////7
+randomize();
+sombra1x = floor(random_range(50,100));
+sombra1y = floor(random_range(100,200));
+randomize();
+sombra2x = floor(random_range(100,150));
+sombra2y = floor(random_range(50,100));
+randomize();
+sombra3x = floor(random_range(150,200));
+sombra3y = floor(random_range(150,175));
+randomize();
+sombra4x = floor(random_range(200,250));
+sombra4y = floor(random_range(75,125));
+randomize();
+sombra5x = floor(random_range(75,125));
+sombra5y = floor(random_range(125,175));
+randomize();
+sombra6x = floor(random_range(125,175));
+sombra6y = floor(random_range(25,75));
+
+if (global.locura &gt; 20 &amp;&amp; global.sombra[0] == 0)
+{
+    randomize();
+    rnd_sombra = floor(random_range(1,5))-1;
+    if (rnd_sombra != 3)
+    {
+        instance_create(obj_prota.x -100,obj_prota.y -50,global.sombra_obj[rnd_sombra]);
+        global.sombra[0] = global.sombra_obj[rnd_sombra];
+    }
+    else
+    {
+        fuego1 = instance_create(obj_prota.x - sombra1x,obj_prota.y - sombra1y,global.sombra_obj[rnd_sombra]);                
+        fuego2 = instance_create(obj_prota.x + sombra2x,obj_prota.y -sombra2y,global.sombra_obj[rnd_sombra]);
+        fuego2.sube = false;         
+        fuego2.image_angle = 180;
+        fuego6 = instance_create(obj_prota.x - sombra3x,obj_prota.y + sombra3y,global.sombra_obj[rnd_sombra]);         
+        fuego3 = instance_create(obj_prota.x + sombra4x,obj_prota.y + sombra4y,global.sombra_obj[rnd_sombra]);         
+        fuego3.image_angle = 180;        
+        fuego3.sube = false;
+        fuego4 = instance_create(obj_prota.x - sombra5x,obj_prota.y - sombra5y,global.sombra_obj[rnd_sombra]);         
+        fuego4.sube = false;        
+        fuego5 = instance_create(obj_prota.x + sombra6x,obj_prota.y -sombra6y,global.sombra_obj[rnd_sombra]);         
+        fuego5.image_angle = 180;
+        
+        fuego1.alarm[1] = sombra1x;
+        fuego2.alarm[1] = sombra2y;
+        fuego3.alarm[1] = sombra4y;
+        fuego4.alarm[1] = sombra5x;
+        fuego6.alarm[1] = sombra3x;
+        fuego5.alarm[1] = sombra6y;
+        global.sombra[0] = global.sombra_obj[rnd_sombra];  
+    }    
+}
+
+if (global.locura &gt; 40 &amp;&amp; global.sombra[1] == 0)
+{
+    randomize();
+    rnd_sombra = floor(random_range(1,5))-1;
+    if(global.sombra[0] != global.sombra_obj[rnd_sombra])
+    {
+        if (rnd_sombra != 3)
+        {
+            instance_create(obj_prota.x +100,obj_prota.y -50,global.sombra_obj[rnd_sombra]);
+            global.sombra[1] = global.sombra_obj[rnd_sombra];    
+            
+        }
+        else
+        {
+            fuego1 = instance_create(obj_prota.x - sombra1x,obj_prota.y - sombra1y,global.sombra_obj[rnd_sombra]);
+            fuego1.sube = false;
+            fuego2 = instance_create(obj_prota.x + sombra2x,obj_prota.y -sombra2y,global.sombra_obj[rnd_sombra]);
+            fuego2.sube = false;
+            fuego2.image_angle = 180;
+            fuego6 =instance_create(obj_prota.x - sombra3x,obj_prota.y + sombra3y,global.sombra_obj[rnd_sombra]);
+            fuego3 = instance_create(obj_prota.x + sombra4x,obj_prota.y + sombra4y,global.sombra_obj[rnd_sombra]);
+            fuego3.image_angle = 180;
+            fuego4 = instance_create(obj_prota.x + sombra5x,obj_prota.y - sombra5y,global.sombra_obj[rnd_sombra]);
+            fuego4.image_angle = 180;                    
+            fuego5 = instance_create(obj_prota.x - sombra6x,obj_prota.y -sombra6y,global.sombra_obj[rnd_sombra]);
+            fuego5.suber = false;
+            
+            fuego1.alarm[1] = sombra1x;
+            fuego2.alarm[1] = sombra2y;
+            fuego3.alarm[1] = sombra4y;
+            fuego4.alarm[1] = sombra5x;
+            fuego6.alarm[1] = sombra3x;
+            fuego5.alarm[1] = sombra6y;
+            global.sombra[1] = global.sombra_obj[rnd_sombra];  
+        }
+    }  
+}
+
+if (global.locura &gt; 60 &amp;&amp; global.sombra[2] == 0 )
+{
+    randomize();
+    rnd_sombra = floor(random_range(1,5))-1;
+    if(global.sombra[0] != global.sombra_obj[rnd_sombra] &amp;&amp; global.sombra[1] != global.sombra_obj[rnd_sombra])
+    {
+        if (rnd_sombra != 3)
+        {
+            instance_create(obj_prota.x +100,obj_prota.y -150,global.sombra_obj[rnd_sombra]);
+            global.sombra[2] = global.sombra_obj[rnd_sombra];
+        }
+        else
+        {
+            fuego1 = instance_create(obj_prota.x - sombra1x,obj_prota.y - sombra1y,global.sombra_obj[rnd_sombra]);
+            fuego1.sube = false;
+            fuego2 = instance_create(obj_prota.x + sombra2x,obj_prota.y -sombra2y,global.sombra_obj[rnd_sombra]);
+            fuego2.sube = false;
+            fuego2.image_angle = 180;
+            fuego6 =instance_create(obj_prota.x - sombra3x,obj_prota.y + sombra3y,global.sombra_obj[rnd_sombra]);
+            fuego3 = instance_create(obj_prota.x + sombra4x,obj_prota.y + sombra4y,global.sombra_obj[rnd_sombra]);
+            fuego3.image_angle = 180;
+            fuego3.sube = false;
+            fuego4 = instance_create(obj_prota.x - sombra5x,obj_prota.y + sombra5y,global.sombra_obj[rnd_sombra]);                    
+            fuego5 = instance_create(obj_prota.x + sombra6x,obj_prota.y +sombra6y,global.sombra_obj[rnd_sombra]);
+            fuego5.image_angle = 180;
+            
+            fuego1.alarm[1] = sombra1x;
+            fuego2.alarm[1] = sombra2y;
+            fuego3.alarm[1] = sombra4y;
+            fuego4.alarm[1] = sombra5x;
+            fuego6.alarm[1] = sombra3x;
+            fuego5.alarm[1] = sombra6y;
+            global.sombra[2] = global.sombra_obj[rnd_sombra];  
+        }
+    }
+}
+
+if (global.locura &gt; 80 &amp;&amp; global.sombra[3] == 0 )
+{
+    randomize();
+    rnd_sombra = floor(random_range(1,5))-1;
+    if(global.sombra[0] != global.sombra_obj[rnd_sombra] &amp;&amp; global.sombra[1] != global.sombra_obj[rnd_sombra] &amp;&amp; global.sombra[2] != global.sombra_obj[rnd_sombra])
+    {
+        if (rnd_sombra != 3)
+        {
+            instance_create(obj_prota.x -100,obj_prota.y -150,global.sombra_obj[rnd_sombra]);
+            global.sombra[3] = global.sombra_obj[rnd_sombra];   
+        }
+        else
+        {
+            fuego1 = instance_create(obj_prota.x - sombra1x,obj_prota.y - sombra1y,global.sombra_obj[rnd_sombra]);
+            fuego1.sube = false;
+            fuego2 = instance_create(obj_prota.x + sombra2x,obj_prota.y -sombra2y,global.sombra_obj[rnd_sombra]);
+            fuego2.sube = false;
+            fuego2.image_angle = 180;
+            fuego6 =instance_create(obj_prota.x - sombra3x,obj_prota.y + sombra3y,global.sombra_obj[rnd_sombra]);
+            fuego3 = instance_create(obj_prota.x + sombra4x,obj_prota.y + sombra4y,global.sombra_obj[rnd_sombra]);
+            fuego3.image_angle = 180;
+            fuego4 = instance_create(obj_prota.x + sombra5x,obj_prota.y + sombra5y,global.sombra_obj[rnd_sombra]);
+            fuego4.sube = false;
+            fuego4.image_angle = 180;        
+            fuego5 = instance_create(obj_prota.x - sombra6x,obj_prota.y -sombra6y,global.sombra_obj[rnd_sombra]);
+            
+            fuego1.alarm[1] = sombra1x;
+            fuego2.alarm[1] = sombra2y;
+            fuego3.alarm[1] = sombra4y;
+            fuego4.alarm[1] = sombra5x;
+            fuego6.alarm[1] = sombra3x;
+            fuego5.alarm[1] = sombra6y;
+            global.sombra[3] = global.sombra_obj[rnd_sombra];  
+        }
+    }
+}
+
+///////////////////////eliminar sombras ////////////////////
+if (global.locura &lt; 20 &amp;&amp; global.sombra[0] != 0)
+{
+    with (global.sombra[0]) instance_destroy();
+    global.sombra[0] = 0;
+}
+
+if (global.locura &lt; 40 &amp;&amp; global.sombra[1] != 0)
+{
+    with (global.sombra[1]) instance_destroy();
+    global.sombra[1] = 0;
+}
+
+if (global.locura &lt; 60 &amp;&amp; global.sombra[2] != 0)
+{
+    with (global.sombra[2]) instance_destroy();
+    global.sombra[2] = 0;
+}
+
+if (global.locura &lt; 80 &amp;&amp; global.sombra[3] != 0)
+{
+    with (global.sombra[3]) instance_destroy();
+    global.sombra[3] = 0;
+}
 </string>
           </argument>
         </arguments>
@@ -210,7 +409,7 @@ if(keyboard_check(ord("R")) &amp;&amp; global.locura &lt; 98 &amp;&amp; limiteAl
 //////////////////disminuir locura ///////////////////////////
 if(alarm[0] &lt; 0 &amp;&amp; global.locura &gt; 0 &amp;&amp; !keyboard_check(ord("R")))
 {
-    alarm[0] = 75;
+    alarm[0] = 60;
 }
 if(global.locura &lt; 0)
 {
